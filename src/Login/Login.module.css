@@ -1,0 +1,36 @@
+.background {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    background: linear-gradient(104.34deg, #3C4CAD -15.34%, #00C3FF 145.95%), #FFFFFF;
+}
+
+.loginBackground__image {
+    box-sizing: border-box;
+
+    width: inherit;
+    height: inherit;
+
+    background: url("../assets/wallpaper.png");
+}
+
+@media screen and (min-width: 1440px) {
+    .background {
+        width: 100%;
+    }
+
+    .loginBackground__image {
+        background: url("../assets/wallpaper.png") center top;
+    }
+}
+
+.loginBackground__image__blur {
+    position: absolute;
+
+    width: inherit;
+    height: inherit;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
