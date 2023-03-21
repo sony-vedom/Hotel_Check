@@ -1,0 +1,182 @@
+.cardContainer {
+    padding: 0;
+    width: 600px;
+    overflow: hidden;
+    position: absolute;
+    height: 563px;
+
+
+}
+
+.cardContainer__favorite {
+    width: 320px;
+    height: 350px;
+}
+
+.card {
+    width: 100% !important;
+
+    display: flex;
+    padding: 0 32px 5px 0;
+
+    height: auto;
+}
+
+.card__favorite {
+
+    height: auto;
+
+}
+
+.card > div:nth-child(1) {
+    display: flex;
+
+    padding: 0 32px 5px 0;
+
+    height: auto;
+
+}
+
+.card__favorite > div:nth-child(1) {
+    display: flex;
+
+    padding: 0 32px 5px 0;
+
+    height: auto;
+
+}
+
+.houseFrame {
+    flex-grow: 1;
+
+    margin-right: 24px;
+    width: 64px;
+    height: 64px;
+    background: url("../../assets/image/icons/houseContainer.svg") no-repeat;
+
+    position: relative;
+
+    grid-area: houseIcon;
+}
+
+.houseFrame__favorite {
+    display: none;
+}
+
+.houseFrame > svg {
+    position: absolute;
+
+    left: 14px;
+    top: 13px;
+}
+
+.information, .card__favorite .information {
+    grid-area: information;
+    position: relative;
+    width: 320px;
+
+}
+
+.card__favorite .information {
+    width: 270px;
+
+}
+
+.hotelName {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 22px;
+}
+
+.date {
+    display: grid;
+    width: 177px;
+    grid-template-columns: minmax(0, 1fr) 19px 56px;
+}
+
+.date > * {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #878787;
+}
+
+.stars {
+
+    width: 99px;
+    height: 17px;
+    margin-top: 5px;
+    left: -2px;
+}
+
+.card__favorite .stars {
+    margin-top: 10px;
+}
+
+.priceFavorite, .card__favorite .priceFavorite {
+    grid-area: priceFavorite;
+    display: grid;
+    gap: 22px;
+    justify-self: end;
+    text-align: end;
+
+    width: 150px;
+
+    /*height: 150%;*/
+
+}
+
+.card__favorite .priceFavorite {
+    height: 70%;
+
+    position: absolute;
+    /*left: 5px;*/
+    right: 17px;
+    top: 10px;
+    bottom: 74.68%;
+
+    width: auto;
+
+}
+
+.favorite, .favorite__favorite {
+    border: none;
+    background: none;
+    width: 23px;
+    height: 20px;
+    justify-self: end;
+    cursor: pointer;
+}
+
+.price {
+    display: flex;
+    width: 150px;
+    justify-content: flex-end;
+}
+
+.price > p:nth-child(1) {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 22px;
+
+    color: #878787;
+    margin-right: 22px;
+}
+
+.price > p:nth-child(2) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+
+    text-align: right;
+}
+
+.borderIcon {
+    grid-area: borderIcon;
+}
+
+.borderIcon > svg {
+    width: 96%;
+}

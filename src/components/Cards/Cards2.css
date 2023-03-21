@@ -1,0 +1,37 @@
+/*.my  {*/
+/*    padding: 0;*/
+/*    !*width: 100% !important;*!*/
+/*    overflow: hidden;*/
+/*    width: 320px;*/
+/*    !*position: absolute;*!*/
+/*    !*display: grid;*!*/
+/*    !*justify-content: start;*!*/
+/*    !*align-content: start;*!*/
+/*}*/
+
+/*!*.cardContainer .swiper-slide-active, .cardContainer .swiper-slide-next {*!*/
+/*!*    padding-bottom: 0px;*!*/
+/*!*    height: 88px;*!*/
+/*!*}*!*/
+
+/*!*.cardContainer .swiper-slide-active svg, .cardContainer .swiper-slide-next svg {*!*/
+/*!*    position: relative;*!*/
+/*!*    bottom: 0;*!*/
+/*!*    margin-top: 0;*!*/
+
+/*!*    !*padding-bottom: 10px;*!*!*/
+/*!*}*!*/
+
+/*!*.cardContainer .swiper-slide {*!*/
+/*!*    margin-top: 0;*!*/
+/*!*    height: auto;*!*/
+/*!*}*!*/
+
+/*!*.cardContainer .swiper-slide:nth-child(3) {*!*/
+/*!*    position: relative;*!*/
+
+/*!*    margin-top: 0;*!*/
+/*!*    height: auto;*!*/
+
+/*!*    bottom: -3%;*!*/
+/*!*}*!*/

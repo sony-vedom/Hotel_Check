@@ -1,0 +1,52 @@
+.form__formik__field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 7px;
+
+    height: 76px;
+
+
+}
+
+.form__formik__field__input {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 10px;
+
+    font-family: Roboto, sans-serif;
+
+    width: inherit;
+    height: 50px;
+
+    background: #FFFFFF;
+    border: 1px solid #C9CACC;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #424242;
+
+
+}
+
+.form__formik__field_error {
+    height: 14px;
+
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+
+    display: flex;
+    align-items: center;
+
+    color: #EB1717;
+}

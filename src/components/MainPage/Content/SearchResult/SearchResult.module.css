@@ -1,0 +1,52 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 48px 32px;
+    gap: 28px;
+
+    width: 600px;
+    height: 806px;
+
+    background: #FFFFFF;
+
+    box-shadow: 0 4px 33px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 42px;
+
+    width: 600px;
+    height: 38px;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+
+}
+
+.date {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+
+    color: #41522E;
+}

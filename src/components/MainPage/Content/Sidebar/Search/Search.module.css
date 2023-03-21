@@ -1,0 +1,29 @@
+.search {
+    height: 410px;
+}
+
+.form__formik {
+    width: 296px;
+    height: 346px;
+    display: grid;
+    gap: 16px;
+}
+
+.form__formik__field {
+    width: 296px;
+}
+
+.form__formik__field__label {
+    height: 19px;
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #424242;
+
+    display: flex;
+    align-items: center;
+}
