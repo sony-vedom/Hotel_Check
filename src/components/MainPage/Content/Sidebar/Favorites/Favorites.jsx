@@ -18,7 +18,7 @@ const Favorites = () => {
 
     useEffect(() => {
         dispatch(setSort({button, select}))
-    }, [button, select])
+    }, [button, select, cardList])
 
     useEffect(() => {
         if (favorite !== null) {
