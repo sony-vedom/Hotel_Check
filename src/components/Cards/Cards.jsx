@@ -26,7 +26,7 @@ const Cards = ({cardList, favorite, setFavorite, height, favoritesStyle}) => {
         mousewheel={true}
         style={height}
         className={favoritesStyle ? styles.cardContainer__favorite : styles.cardContainer}
-        scrollbar={{draggable: true, dragSize: 100.33, hide: true}}>
+        scrollbar={{draggable: true, dragSize: 100.33, hide: !!favoritesStyle}}>
         {cardList && cardList.map((el, i, array) => {
             const marginTop = !!array[i - 1] ? array[i - 1].hotelName.length > 62 : false
             const marginTopFavorite = !!array[i - 1] ? array[i - 1].hotelName.length > 27 && el.hotelName.length < 62 : false
