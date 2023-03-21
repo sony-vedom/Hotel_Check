@@ -23,9 +23,7 @@ export const hotelsList = createSlice({
             state.length = 0
         },
         updateList: (state, action) => {
-            debugger
             state.splice(action.payload, 1)
-            debugger
         }
     },
 })

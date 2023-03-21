@@ -1,18 +1,22 @@
 import styles from "./Favorites.module.css";
 import Cards from "../../../../Cards/Cards";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {ReactComponent as SelectorIcon} from "../../../../../assets/image/icons/sortGreen.svg";
-import {useReducer, useState} from "react";
+import {useEffect, useState} from "react";
 import classNames from "classnames";
 import {ReactComponent as SelectorIconDark} from "../../../../../assets/image/icons/sortDarkGreen.svg";
+import {setSort} from "../../../../../redux/reducers/favoritesSort";
 
 const Favorites = () => {
     const cardList = [...useSelector((state) => state.favorites)]
+    const dispatch = useDispatch()
 
     const [button, setButton] = useState("")
     const [select, setSelect] = useState("")
 
-  
+    useEffect(() => {
+        dispatch(setSort({button, select}))
+    }, [button, select])
 
     const buttonCn = elem => {
         return (button === elem) ? classNames(styles.button, styles.active) : styles.button
