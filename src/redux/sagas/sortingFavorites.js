@@ -5,7 +5,6 @@ import {setSort} from "../reducers/favoritesSort";
 
 export function* sortingFavorites() {
     const sortState = yield select(state => state.favoritesSort)
-debugger
     switch (sortState.button) {
         case "rating": {
             yield put(sortByRatingFavoritesGlobal(sortState.select))
