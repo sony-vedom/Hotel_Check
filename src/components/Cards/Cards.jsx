@@ -1,5 +1,4 @@
 import styles from "./Cards.module.css";
-import './Cards2.css';
 import {ReactComponent as StarIcon} from "../../assets/image/icons/star.svg";
 import {ReactComponent as StarGrayIcon} from "../../assets/image/icons/starGray.svg";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -13,18 +12,15 @@ const Cards = ({cardList, favorite, setFavorite, height, favoritesStyle}) => {
 
     return <Swiper
         slidesPerView={favoritesStyle ? 3 : 5}
-        spaceBetween={(cardList.length<5 && !favoritesStyle && 90) || 0}
-        initialSlide = {1}
-    keyboard={true}
+        spaceBetween={(cardList.length < 5 && !favoritesStyle && 90) || 0}
+        initialSlide={1}
+        keyboard={true}
         direction="vertical"
         mousewheel={true}
         style={height}
-        className={favoritesStyle ? styles.cardContainer__favorite : styles.cardContainer }
+        className={favoritesStyle ? styles.cardContainer__favorite : styles.cardContainer}
         scrollbar={{draggable: true, dragSize: 100.33, hide: true}}>
         {cardList && cardList.map((el, i, array) => {
-            // 40
-
-            favoritesStyle && console.log(i % 3 !== 0)
             const marginTop = !!array[i - 1] ? array[i - 1].hotelName.length > 62 : false
             const marginTopFavorite = !!array[i - 1] ? array[i - 1].hotelName.length > 27 && el.hotelName.length < 62 : false
             const fontsize = !!array[i - 1] ? array[i].hotelName.length > 62 : false
@@ -38,9 +34,8 @@ const Cards = ({cardList, favorite, setFavorite, height, favoritesStyle}) => {
                 stars.push(<StarGrayIcon key={key}/>)
                 key += 1;
             }
-            return <SwiperSlide className={favoritesStyle ? styles.card__favorite :styles.card} key={el.hotelName}
+            return <SwiperSlide className={favoritesStyle ? styles.card__favorite : styles.card} key={el.hotelName}
                                 style={(favoritesStyle && marginTopFavorite && {paddingTop: "12px"}) || (marginTop && {paddingTop: "18px"}) || {}}>
-                {/* paddingTop 18*/}
                 <div>
                     <div className={favoritesStyle ? styles.houseFrame__favorite : styles.houseFrame}>
                         <HouseIcon/>
@@ -59,8 +54,12 @@ const Cards = ({cardList, favorite, setFavorite, height, favoritesStyle}) => {
                         </div>
                     </div>
                     <div className={styles.priceFavorite}>
-                        <button className={favoritesStyle ? styles.favorite__favorite : styles.favorite} onClick={setFavorite ? () => setFavorite(i) : null}>
-                            {i === favorite ? <HeartIconRed/> : <HeartIcon/>}
+                        <button className={favoritesStyle ? styles.favorite__favorite : styles.favorite}
+                                onClick={setFavorite ? () => setFavorite(i) : null}>
+                            { !favoritesStyle
+                                ? i === favorite ? <HeartIconRed/> : <HeartIcon/>
+                                : i === favorite ? <HeartIcon/> : <HeartIconRed/>
+                            }
                         </button>
                         <div className={styles.price}>
                             <p>Price:</p>

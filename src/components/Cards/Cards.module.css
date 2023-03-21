@@ -3,8 +3,6 @@
     width: 600px;
 
     position: absolute;
-    /*height: 573px;*/
-
 
 }
 
@@ -31,6 +29,7 @@
     display: flex;
 
     padding: 0 32px 5px 0;
+
 }
 
 .card__favorite > div:nth-child(1) {
@@ -39,6 +38,9 @@
     padding: 0 32px 5px 0;
 
     height: auto;
+
+    position: relative;
+
 
 }
 
@@ -68,7 +70,6 @@
 
 .information, .card__favorite .information {
     grid-area: information;
-    position: relative;
     width: 320px;
 
 }
@@ -119,20 +120,17 @@
 
     width: 150px;
 
-    /*height: 150%;*/
-
 }
 
 .card__favorite .priceFavorite {
-    height: 70%;
+    height: 90%;
 
     position: absolute;
-    /*left: 5px;*/
     right: 17px;
-    top: 10px;
+    top: 0px;
     bottom: 74.68%;
 
-    width: auto;
+    width: 50%;
 
 }
 

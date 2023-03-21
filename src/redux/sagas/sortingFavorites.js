@@ -1,5 +1,5 @@
 import {select, takeEvery, put} from 'redux-saga/effects'
-import {sortByRatingFavoritesGlobal} from "../reducers/favorites";
+import {sortByPriceFavoritesGlobal, sortByRatingFavoritesGlobal} from "../reducers/favorites";
 import {setSort} from "../reducers/favoritesSort";
 
 
@@ -12,7 +12,7 @@ debugger
             break
         }
         case "price": {
-            yield put(sortByRatingFavoritesGlobal(sortState.select))
+            yield put(sortByPriceFavoritesGlobal(sortState.select))
             break
         }
         default: {

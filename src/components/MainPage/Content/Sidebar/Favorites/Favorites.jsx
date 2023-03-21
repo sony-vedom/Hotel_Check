@@ -6,6 +6,7 @@ import {useEffect, useState} from "react";
 import classNames from "classnames";
 import {ReactComponent as SelectorIconDark} from "../../../../../assets/image/icons/sortDarkGreen.svg";
 import {setSort} from "../../../../../redux/reducers/favoritesSort";
+import {deleteFavoritesGlobal} from "../../../../../redux/reducers/favorites";
 
 const Favorites = () => {
     const cardList = [...useSelector((state) => state.favorites)]
@@ -13,10 +14,18 @@ const Favorites = () => {
 
     const [button, setButton] = useState("")
     const [select, setSelect] = useState("")
+    const [favorite, setFavorite] = useState(null)
 
     useEffect(() => {
         dispatch(setSort({button, select}))
     }, [button, select])
+
+    useEffect(() => {
+        if (favorite !== null) {
+            dispatch(deleteFavoritesGlobal(favorite))
+            setFavorite(null)
+        }
+    }, [favorite])
 
     const buttonCn = elem => {
         return (button === elem) ? classNames(styles.button, styles.active) : styles.button
@@ -66,7 +75,7 @@ const Favorites = () => {
                     </div>
                 </button>
             </div>
-            <Cards cardList={cardList} favoritesStyle={true}/>
+            <Cards cardList={cardList} favoritesStyle={true} favorite={favorite} setFavorite={setFavorite}/>
         </section>
     )
 }

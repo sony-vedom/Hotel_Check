@@ -3,14 +3,14 @@ import {setFavoritesGlobal} from "../reducers/favorites";
 import {updateList} from "../reducers/hotelsList";
 
 
-export function* updateListWithDelay(payload) {
+export function* putUpdateList(payload) {
     yield put (updateList(payload.i))
 }
 
 export function* watcherAddingFavorite() {
     while (true) {
         const action = yield take(setFavoritesGlobal().type)
-        yield fork(updateListWithDelay, action.payload)
+        yield fork(putUpdateList, action.payload)
     }
 }
 

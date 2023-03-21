@@ -23,10 +23,13 @@ export const favorites = createSlice({
             state = (action.payload === "up")
                 ? state.sort((a, b) => Number(a.price) - Number(b.price))
                 : state.sort((a, b) => Number(b.price) - Number(a.price))
+        },
+        deleteFavoritesGlobal: (state, action) => {
+            state.splice(action.payload, 1)
         }
     },
 })
 
-export const {setFavoritesGlobal, sortByRatingFavoritesGlobal, sortByPriceFavoritesGlobal} = favorites.actions
+export const {setFavoritesGlobal, sortByRatingFavoritesGlobal, sortByPriceFavoritesGlobal, deleteFavoritesGlobal} = favorites.actions
 
 export default favorites.reducer
