@@ -4,7 +4,7 @@
     display: grid;
     align-content: start;
     /*gap: 32px;*/
-    gap: 24px;
+    gap: 19px;
 }
 
 .head {
@@ -28,28 +28,60 @@
     height: 28px;
 }
 
-.active {
+.buttons > .button {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 4px 8px;
-    gap: 4px;
-
-    width: 89px;
-    height: 28px;
+    gap: 7px;
 
     background: #FFFFFF;
-    border: 1px solid #41522E;
-    border-radius: 4px;
+
 
     font-family: inherit;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-
     letter-spacing: -0.408px;
 
+    border-radius: 4px;
+
+    color: #99A0A3;
+    border: 1px solid #E5E5E5;
+
+    width: 89px;
+    height: 28px;
+
+    cursor: pointer;
+}
+
+.buttons > .active {
+    border: 1px solid #41522E;
     color: #41522E;
+}
+
+.buttons > button:nth-child(2) {
+    width: 71px;
+    height: 28px;
+
+}
+
+.select {
+    width: 14px;
+    height: 18px;
+
+    display: grid;
+
+    color: #00C3FF;
+
+}
+
+.select > svg:nth-child(1) {
+    transform: rotate(180deg);
+    position: relative;
+
+    left: -0.045em;
+    top: 0.09em;
 
 }
