@@ -2,9 +2,9 @@ import styles from "./Search.module.css";
 import {Form, Formik} from "formik";
 import MyInput from "../../../../FormSettings/MyInput/MyInput";
 import MyButton from "../../../../FormSettings/MyButton/MyButton";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {setSearchData} from "../../../../../redux/reducers/search";
-import {deleteResult, hotelsList} from "../../../../../redux/reducers/hotelsList";
+import {deleteResult} from "../../../../../redux/reducers/hotelsList";
 import {useEffect} from "react";
 
 

@@ -1,4 +1,4 @@
-import {delay, fork, put, take} from 'redux-saga/effects'
+import {fork, put, take} from 'redux-saga/effects'
 import {setFavoritesGlobal} from "../reducers/favorites";
 import {updateList} from "../reducers/hotelsList";
 

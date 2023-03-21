@@ -1,6 +1,5 @@
 import styles from "../SearchResult.module.css";
 import {ReactComponent as Vector} from "../../../../../assets/image/icons/vector.svg";
-import {useSelector} from "react-redux";
 
 const HeaderSearchResult = ({location, date}) => {
     return <header className={styles.header}>
