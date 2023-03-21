@@ -9,7 +9,6 @@ export const favoritesSort = createSlice({
     },
     reducers: {
         setSort: (state, action) => {
-            debugger
             state.button = action.payload.button
             state.select = action.payload.select
         },
